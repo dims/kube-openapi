@@ -19,7 +19,7 @@ require (
 	go.yaml.in/yaml/v3 v3.0.3
 	golang.org/x/tools v0.24.0
 	google.golang.org/protobuf v1.35.1
-	k8s.io/gengo/v2 v2.0.0-20240826214909-a7b603a56eb7
+	k8s.io/gengo/v2 v2.0.0-20250604051438-85fd79dbfd9f
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
