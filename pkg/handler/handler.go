@@ -24,7 +24,6 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/NYTimes/gziphandler"
 	"github.com/emicklei/go-restful/v3"
 	openapi_v2 "github.com/google/gnostic-models/openapiv2"
 	"github.com/google/uuid"
@@ -37,6 +36,7 @@ import (
 	"k8s.io/kube-openapi/pkg/common"
 	"k8s.io/kube-openapi/pkg/common/restfuladapter"
 	"k8s.io/kube-openapi/pkg/validation/spec"
+	"k8s.io/kube-openapi/third_party/forked/gziphandler"
 )
 
 const (

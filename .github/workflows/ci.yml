@@ -20,14 +20,14 @@ jobs:
     - name: Build
       run: |
         go mod tidy && git diff --exit-code
-        go build ./cmd/... ./pkg/...
+        go build ./cmd/... ./pkg/... ./third_party/...
     - name: Format
       run: |
         diff=$(gofmt -s -d .)
         if [[ -n "${diff}" ]]; then echo "${diff}"; exit 1; fi
     - name: Test
       run: |
-        go test -race ./cmd/... ./pkg/...
+        go test -race ./cmd/... ./pkg/... ./third_party/...
     - name: Run integration tests
       run: |
         cd test/integration
@@ -57,10 +57,10 @@ jobs:
         gotip download
     - name: Build with gotip (default GOEXPERIMENT)
       run: |
-        gotip build ./cmd/... ./pkg/...
+        gotip build ./cmd/... ./pkg/... ./third_party/...
     - name: Test with gotip (default GOEXPERIMENT)
       run: |
-        gotip test -race ./cmd/... ./pkg/...
+        gotip test -race ./cmd/... ./pkg/... ./third_party/...
   required:
     # The name of the ci jobs above change based on the golang version.
     # Use this as a stable required job that depends on the above jobs.
